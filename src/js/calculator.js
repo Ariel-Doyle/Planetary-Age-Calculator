@@ -5,8 +5,12 @@ export class PlanetaryAge {
     this.age = age;
   }
 
-  getPlanetaryAge(i, age) {
+  /*getPlanetaryAge(i, age) {
     let planetAge = (age / PlanetaryAge.PlanetsAndRotations[i][1]).toFixed(2);
     return parseFloat(planetAge);
+  }*/
+
+  loopThroughAllPlanets() {
+
   }
 }
