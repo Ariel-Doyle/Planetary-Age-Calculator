@@ -19,4 +19,10 @@ describe('PlanetaryAge', () => {
     const planetaryAge = new PlanetaryAge();
     expect(planetaryAge.loopThroughAllPlanets(age)).toEqual([233.33, 90.32, 56, 29.79, 4.72, 1.9, .67, .34]);
   });
+
+  test('should return the message "Your age on <planet> is <age>" for each planet', () => {
+    let age = 56;
+    const planetaryAge = new PlanetaryAge();
+    expect(planetaryAge.messageForPlanetaryAge(age)).toEqual(`Your age on Mercury is 233.33`);
+  })
 });
