@@ -26,4 +26,8 @@ export class PlanetaryAge {
     }
     return message;
   }
+
+  messageForPastAndFutureBirthdays() {
+    
+  }
 }
