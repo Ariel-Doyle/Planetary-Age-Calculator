@@ -45,7 +45,6 @@ export class PlanetaryAge {
     for(let i = 0; i < planetaryAgeArray.length; i++) {
       yearsMessage += `${planetaryAgeArray[i]} years ${birthdayMessage} on ${PlanetaryAge.PlanetsAndRotations[i][0]}\n` 
     } 
-    
     return yearsMessage;
   }
 }
