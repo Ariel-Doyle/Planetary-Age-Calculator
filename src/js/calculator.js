@@ -27,7 +27,25 @@ export class PlanetaryAge {
     return message;
   }
 
-  messageForPastAndFutureBirthdays() {
+  messageForPastAndFutureBirthdays(age, newAge) {    
+    let years = age - newAge;
+    let yearsMessage = ``;
+    let birthdayMessage = ``;
+    let planetaryAgeArray = [];
+
+    if (years > 0) {
+      birthdayMessage = `have passed`;
+    } else if (years <= 0) {
+      birthdayMessage = 'have yet to pass';
+      years *= (-1);
+    } 
+
+    planetaryAgeArray = this.loopThroughAllPlanets(years);
+
+    for(let i = 0; i < planetaryAgeArray.length; i++) {
+      yearsMessage += `${planetaryAgeArray[i]} years ${birthdayMessage} on ${PlanetaryAge.PlanetsAndRotations[i][0]}\n` 
+    } 
     
+    return yearsMessage;
   }
 }
